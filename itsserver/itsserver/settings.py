@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
+#import dj_database_url
+#db_from_env = dj_database_url.config(conn_max_age=500)
 
 import os
 
@@ -27,7 +27,7 @@ SECRET_KEY = 'fhm&1+xg3v_#iz%wq6g__)gcnxrogo$q=+gf$j290^hlir$nt7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['itsserver.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,9 +122,9 @@ USE_TZ = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
-DATABASES['default'].update(db_from_env)
+#DATABASES['default'].update(db_from_env)
