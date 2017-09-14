@@ -10,6 +10,8 @@ class Farmer(models.Model):
 	wells = models.IntegerField()
 	godowns = models.IntegerField()
 	capacity = models.IntegerField()
+	dob = models.DateField(max_length=100)
 
 	def __str__(self):
 		return self.name
+	

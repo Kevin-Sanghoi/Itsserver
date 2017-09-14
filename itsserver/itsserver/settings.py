@@ -27,7 +27,7 @@ SECRET_KEY = 'fhm&1+xg3v_#iz%wq6g__)gcnxrogo$q=+gf$j290^hlir$nt7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.3.23']
+ALLOWED_HOSTS = ['10.0.3.23','127.0.0.1',]
 
 
 # Application definition
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    'map.apps.MapConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,11 @@ WSGI_APPLICATION = 'itsserver.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'itsdata',
+        'USER': 'kevin',
+        'PASSWORD': 'iiits@123',
+        'HOST': 'localhost',
     }
 }
 
