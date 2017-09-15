@@ -31,6 +31,7 @@ def householddetail(request):
 		return res
 
 def welldetail(request):
+#	return HttpResponse('<h1 style="color:red;"> Welcome to Gis</h1>')
 	if request.method == 'POST':
 		username = request.POST.get('username', None)
 		data = { 'well_detail': serializers.serialize('geojson', Well.objects.all(),geometry_field='location') }

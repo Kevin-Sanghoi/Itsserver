@@ -14,8 +14,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from os import environ
-GEOS_LIBRARY_PATH = "{}/libgeos_c.so".format(environ.get('LIBRARY_PATH_ITS'))
-GDAL_LIBRARY_PATH = "{}/libgeos.so".format(environ.get('LIBRARY_PATH_ITS'))
+#GEOS_LIBRARY_PATH = "{}/libgeos_c.so".format(environ.get('LIBRARY_PATH_ITS'))
+#GDAL_LIBRARY_PATH = "{}/libgeos.so".format(environ.get('LIBRARY_PATH_ITS'))
 PROJ4_LIBRARY_PATH = "{}/libgeos.so".format(environ.get('LIBRARY_PATH_ITS'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

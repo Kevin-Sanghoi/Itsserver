@@ -20,5 +20,5 @@ from django.contrib.gis import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^restapi/', include('restapi.urls')),
-    url(r'^maps/', include('map.urls')),
+    url(r'^map/', include('map.urls')),
 ]
